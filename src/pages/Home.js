@@ -7,12 +7,12 @@ import './Home.css';
 function Home() {
   return (
     <div className='home'>
-        <div className='home_header'>
-            <div className='home_headerLeft'>
+        <div className='home__header'>
+            <div className='home__headerLeft'>
                 <Link to='/about'>About</Link>
                 <Link to='/store'>Store</Link>
             </div>
-            <div className='home_headerRight'>
+            <div className='home__headerRight'>
                 <Link to='gmail'>Gmail</Link>
                 <Link to='/images'>Images</Link>
                 <AppsIcon />
@@ -20,13 +20,16 @@ function Home() {
             </div>
         </div>
 
-        <div className='home_body'>
-            <img src='https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png' alt='logo' />
+        <div className="home__body">
+        
+            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="logo"/>        
+
+            <div className='home__inputContainer'>
+                {/*<Search />*/}
+            </div>
+            
         </div>
 
-        <div className='home_inputContainer'>
-            {/*<Search />*/}
-        </div>
     </div>
     
   );
