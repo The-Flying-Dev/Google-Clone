@@ -2,6 +2,7 @@ import React from 'react'
 import { Avatar } from '@material-ui/core';
 import AppsIcon from '@material-ui/icons/Apps';
 import { Link } from 'react-router-dom';
+import Search from '../components/Search';
 import './Home.css';
 
 function Home() {
@@ -25,9 +26,9 @@ function Home() {
             <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="logo"/>        
 
             <div className='home__inputContainer'>
-                {/*<Search />*/}
+                <Search />
             </div>
-            
+
         </div>
 
     </div>
