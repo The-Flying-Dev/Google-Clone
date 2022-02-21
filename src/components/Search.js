@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';  //useHistory not available for this version of React
 import SearchIcon from '@material-ui/icons/Search';
 import MicIcon from '@material-ui/icons/Mic';
 import { Button } from '@material-ui/core';
@@ -11,7 +11,7 @@ function Search({ hideButtons = false}) {
 
     const [{}, dispatch] = useStateValue();
     const [term, setTerm] = useState('');    
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const search =(e) => {
         e.preventDefault();
@@ -22,7 +22,7 @@ function Search({ hideButtons = false}) {
         });
 
 
-        history.push('/search')
+        navigate('/search')
     };
 
 
@@ -59,7 +59,7 @@ function Search({ hideButtons = false}) {
         ) : (
           <div className='search__buttons'>
             <Button 
-              className='seacr__buttonsHiden'
+              className='seacrh__buttonsHiden'
               onClick={search}
               type='submit'
               variant='outlined'
@@ -75,7 +75,7 @@ function Search({ hideButtons = false}) {
         )}
     </form>
     
-  )
+  );
 }
 
 export default Search
