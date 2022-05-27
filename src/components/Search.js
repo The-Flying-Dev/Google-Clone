@@ -9,7 +9,7 @@ import './Search.css';
 
 function Search({ hideButtons = false}) {
 
-    const [ dispatch ] = useStateValue();
+    const [ {}, dispatch ] = useStateValue();
     const [term, setTerm] = useState('');    
     const navigate = useNavigate();
 

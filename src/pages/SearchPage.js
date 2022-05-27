@@ -15,7 +15,7 @@ import './SearchPage.css';
 
 //state to keep track of search terms entered
 function SearchPage() { 
-    const [{ term }] = useStateValue();
+    const [{ term } ] = useStateValue();
 
     const {data} = useGoogleSearch(term);
     console.log(data);
